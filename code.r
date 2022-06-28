@@ -69,5 +69,19 @@ Team_Big_Data$RD<-as.integer(Team_Big_Data$RD)
 
 
 
+# analysing Data ###########################################
+
+# show general summary about the columns 
+summary(Team_Big_Data)
+
+#show round difference distribution per map 
+
+Team_Big_Data%>%ggplot(aes(`Map Name`,RD,colour=`Map Name`,size=RD))+
+      geom_boxplot() + labs(y="Round Difference",title = "Round difference  per Map")
+
+
+
+
+
 
 
